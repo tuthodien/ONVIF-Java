@@ -176,14 +176,14 @@ Download
 Download [the latest JAR][2] or grab via Maven:
 ```xml
 <dependency>
-  <groupId>be.teletask.onvif</groupId>
+  <groupId>com.github.03</groupId>
   <artifactId>onvif</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
 </dependency>
 ```
 or Gradle:
 ```groovy
-compile 'be.teletask.onvif:onvif:1.0.2'
+compile 'com.github.03:onvif:1.0.3'
 ```
 
 ## Todos

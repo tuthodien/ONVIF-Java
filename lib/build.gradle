@@ -10,9 +10,11 @@ buildscript {
 
 plugins {
     id 'java'
+    id "com.bmuschko.nexus" version "2.3.1" // Gradle Sonatype Nexux Plugin
+    id "io.codearte.nexus-staging" version "0.21.2" // Gradle Nexus Staging Plugin
 }
 
-group 'be.teletask.onvif'
+group 'com.github.03'
 version '1.0.0'
 
 sourceCompatibility = 1.8
@@ -31,26 +33,26 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'junit', name: 'junit', version: '4.13'
 
     //Annotations
-    compile group: 'org.jetbrains', name: 'annotations', version: '15.0'
+    compile group: 'org.jetbrains', name: 'annotations', version: '19.0.0'
 
     //XML parser
     compile group: 'net.sf.kxml', name: 'kxml2', version: '2.3.0'
 
     //OkHttp
-    compile 'com.squareup.okhttp3:okhttp:3.11.0'
+    compile 'com.squareup.okhttp3:okhttp:4.8.0'
 
     //OkHttp Digest
-    compile 'com.burgstaller:okhttp-digest:1.18'
+    compile 'com.burgstaller:okhttp-digest:2.1'
 }
 
 ext {
     bintrayRepo = 'ONVIF-Java'
     bintrayName = 'ONVIF-Java'
 
-    publishedGroupId = 'be.teletask.onvif'
+    publishedGroupId = 'com.github.03'
     libraryName = 'ONVIF-Java'
     artifact = 'onvif'
 
@@ -59,7 +61,7 @@ ext {
     siteUrl = 'https://github.com/RootSoft/ONVIF-Java'
     gitUrl = 'https://github.com/RootSoft/ONVIF-Java.git'
 
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.0.3'
 
     developerId = 'tomasverhelst'
     developerName = 'Tomas Verhelst'
@@ -70,12 +72,62 @@ ext {
     allLicenses = ["Apache-2.0"]
 }
 
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 group = publishedGroupId
 version = libraryVersion
+archivesBaseName = 'onvif'
 
+modifyPom {
+    project {
+        name 'teachUpload'
+        description 'Teaching how to use gradle.'
+        url 'https://github.com/03/ONVIF-Java'
+        inceptionYear '2020'
+
+        scm {
+            url 'https://github.com/03/ONVIF-Java'
+            connection 'scm:https://github.com/03/ONVIF-Java.git'
+            developerConnection 'scm:git://github.com/03/ONVIF-Java.git'
+        }
+
+        licenses {
+            license {
+                name 'The Apache Software License, Version 2.0'
+                url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                distribution 'repo'
+            }
+        }
+
+        developers {
+            developer {
+                id 'ozcat'
+                name 'Luke Feng'
+                email 'windboxx@gmail.com'
+            }
+        }
+    }
+}
+
+extraArchive {
+    sources = true
+    tests = true
+    javadoc = true
+}
+
+nexus {
+    sign = true
+    repositoryUrl = 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
+    snapshotRepositoryUrl = 'https://oss.sonatype.org/content/repositories/snapshots/'
+}
+
+nexusStaging {
+//    packageGroup = "com.github.03" //optional if packageGroup == project.getGroup()
+    stagingProfileId = "166964289967b" //when not defined will be got from server using "packageGroup"
+}
+
+/*
 install {
     repositories.mavenInstaller {
         pom.project {
@@ -108,8 +160,9 @@ install {
         }
     }
 }
+*/
 
-task sourcesJar(type: Jar) {
+/*task sourcesJar(type: Jar) {
     classifier = 'sources'
     from sourceSets.main.java.srcDirs
 }
@@ -122,10 +175,10 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 artifacts {
     archives javadocJar
     archives sourcesJar
-}
+}*/
 
 Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
 bintray {
     user = properties.getProperty("bintray.user")
