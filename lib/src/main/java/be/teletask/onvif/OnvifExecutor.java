@@ -17,7 +17,6 @@ import com.burgstaller.okhttp.digest.DigestAuthenticator;
 import okhttp3.*;
 import okio.Buffer;
 
-
 import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -70,7 +69,7 @@ public class OnvifExecutor {
     void sendRequest(OnvifDevice device, OnvifRequest request) {
         credentials.setUserName(device.getUsername());
         credentials.setPassword(device.getPassword());
-        reqBody = RequestBody.create(reqBodyType, OnvifXMLBuilder.getSoapHeader() + request.getXml() + OnvifXMLBuilder.getEnvelopeEnd());
+        reqBody = RequestBody.create(OnvifXMLBuilder.getSoapHeader() + request.getXml() + OnvifXMLBuilder.getEnvelopeEnd(), reqBodyType);
         performXmlRequest(device, request, buildOnvifRequest(device, request));
     }
 
@@ -141,6 +140,9 @@ public class OnvifExecutor {
                 GetMediaStreamRequest streamRequest = (GetMediaStreamRequest) response.request();
                 streamRequest.getListener().onMediaStreamURIReceived(device, streamRequest.getMediaProfile(),
                         new GetMediaStreamParser().parse(response));
+                break;
+            case GOTO_HOME_POSITION:
+                ((GotoHomePositionRequest) response.request()).getListener().onResponse(device, response);
                 break;
             default:
                 onvifResponseListener.onResponse(device, response);

@@ -1,17 +1,11 @@
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
-    }
-}
-
 plugins {
     id 'java'
     id "com.bmuschko.nexus" version "2.3.1" // Gradle Sonatype Nexux Plugin
     id "io.codearte.nexus-staging" version "0.21.2" // Gradle Nexus Staging Plugin
+//    id "com.github.dcendents.android-maven" version "2.1"
+//    id "com.jfrog.bintray" version "1.8.5"
+    id 'io.freefair.lombok' version '5.1.1'
+
 }
 
 group 'com.github.03'
@@ -46,6 +40,7 @@ dependencies {
 
     //OkHttp Digest
     compile 'com.burgstaller:okhttp-digest:2.1'
+
 }
 
 ext {
@@ -71,9 +66,6 @@ ext {
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
 }
-
-//apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
 
 group = publishedGroupId
 version = libraryVersion
@@ -125,79 +117,4 @@ nexus {
 nexusStaging {
 //    packageGroup = "com.github.03" //optional if packageGroup == project.getGroup()
     stagingProfileId = "166964289967b" //when not defined will be got from server using "packageGroup"
-}
-
-/*
-install {
-    repositories.mavenInstaller {
-        pom.project {
-            packaging 'jar'
-            groupId publishedGroupId
-            artifactId artifact
-
-            name libraryName
-            description libraryDescription
-            url siteUrl
-
-            licenses {
-                license {
-                    name licenseName
-                    url licenseUrl
-                }
-            }
-            developers {
-                developer {
-                    id developerId
-                    name developerName
-                    email developerEmail
-                }
-            }
-            scm {
-                connection gitUrl
-                developerConnection gitUrl
-                url siteUrl
-            }
-        }
-    }
-}
-*/
-
-/*task sourcesJar(type: Jar) {
-    classifier = 'sources'
-    from sourceSets.main.java.srcDirs
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-artifacts {
-    archives javadocJar
-    archives sourcesJar
-}*/
-
-Properties properties = new Properties()
-//properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
-
-    configurations = ['archives']
-    pkg {
-        repo = bintrayRepo
-        name = bintrayName
-        desc = libraryDescription
-        websiteUrl = siteUrl
-        vcsUrl = gitUrl
-        licenses = allLicenses
-        dryRun = false
-        publish = true
-        override = false
-        publicDownloadNumbers = true
-        version {
-            desc = libraryDescription
-        }
-    }
 }
