@@ -19,15 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3da168ea-4515-4ea8-8ef3-e4a8260bf872" name="Default Changelist" comment="Update version comments">
-      <change afterPath="$PROJECT_DIR$/.idea/ONVIF-Java.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/listeners/OnvifBlankResponseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GotoHomePositionRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3da168ea-4515-4ea8-8ef3-e4a8260bf872" name="Default Changelist" comment="apply lombok DSL and add gotoHomePosition PTZ command">
+      <change afterPath="$PROJECT_DIR$/lib/lombok.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/listeners/OnvifSnapshotURIListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifSnapshotUri.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/parsers/GetSnapshotUriParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/AbsoluteMoveRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GetSnapshotUriRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -37,19 +35,24 @@
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifType.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/responses/OnvifResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/responses/OnvifResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GotoHomePositionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GotoHomePositionRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
@@ -128,7 +131,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1fc2JFiq2k1vZFvqDdeyGviPwzJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -146,6 +151,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="be.teletask.onvif.parsers" />
+      <recent name="be.teletask.onvif.models" />
       <recent name="be.teletask.onvif.listeners" />
       <recent name="be.teletask.onvif.requests" />
     </key>
@@ -162,7 +169,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.lib [uploadArchives]">
+  <component name="RunManager" selected="Gradle.lib [jar]">
     <configuration name="lib [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -201,7 +208,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="lib [closeAndPromoteRepository]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="lib [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/lib" />
@@ -212,7 +219,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="closeAndPromoteRepository" />
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -260,11 +267,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.lib [jar]" />
         <item itemvalue="Gradle.lib [uploadArchives]" />
         <item itemvalue="Gradle.lib [clean]" />
         <item itemvalue="Gradle.lib [build]" />
         <item itemvalue="Gradle.lib [promoteRepository]" />
-        <item itemvalue="Gradle.lib [closeAndPromoteRepository]" />
       </list>
     </recent_temporary>
   </component>
@@ -285,7 +292,7 @@
       <workItem from="1596718514412" duration="878000" />
       <workItem from="1596758564927" duration="14425000" />
       <workItem from="1596778754884" duration="2625000" />
-      <workItem from="1596781482013" duration="864000" />
+      <workItem from="1596781482013" duration="7201000" />
     </task>
     <task id="LOCAL-00001" summary="Update version comments">
       <created>1596515225471</created>
@@ -294,11 +301,28 @@
       <option name="project" value="LOCAL" />
       <updated>1596515225472</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="apply lombok DSL and add gotoHomePosition PTZ command">
+      <created>1596782824606</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596782824606</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -314,17 +338,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update version comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update version comments" />
+    <MESSAGE value="apply lombok DSL and add gotoHomePosition PTZ command" />
+    <option name="LAST_COMMIT_MESSAGE" value="apply lombok DSL and add gotoHomePosition PTZ command" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3008" y="438" width="374" height="556" key="#com.intellij.ide.util.MemberChooser" timestamp="1596777459893">
+    <state x="3008" y="438" width="374" height="556" key="#com.intellij.ide.util.MemberChooser" timestamp="1596784032930">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3008" y="438" width="374" height="556" key="#com.intellij.ide.util.MemberChooser/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596777459893" />
+    <state x="3008" y="438" width="374" height="556" key="#com.intellij.ide.util.MemberChooser/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596784032930" />
     <state x="3047" y="611" width="295" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1596513221645">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3047" y="611" width="295" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596513221645" />
+    <state x="2640" y="0" width="1110" height="1434" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596784233148">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2640" y="0" width="1110" height="1434" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596784233148" />
     <state x="2793" y="318" width="803" height="797" key="CommitChangelistDialog2" timestamp="1596622852111">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -337,22 +366,22 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2964" y="460" width="451" height="506" key="FileChooserDialogImpl/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596782302839" />
-    <state width="2518" height="409" key="GridCell.Tab.0.bottom" timestamp="1596782177517">
+    <state width="2518" height="409" key="GridCell.Tab.0.bottom" timestamp="1596798096931">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.bottom/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596782177517" />
-    <state width="2518" height="409" key="GridCell.Tab.0.center" timestamp="1596782177517">
+    <state width="2518" height="409" key="GridCell.Tab.0.bottom/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596798096931" />
+    <state width="2518" height="409" key="GridCell.Tab.0.center" timestamp="1596798096930">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.center/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596782177517" />
-    <state width="2518" height="409" key="GridCell.Tab.0.left" timestamp="1596782177516">
+    <state width="2518" height="409" key="GridCell.Tab.0.center/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596798096930" />
+    <state width="2518" height="409" key="GridCell.Tab.0.left" timestamp="1596798096930">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.left/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596782177516" />
-    <state width="2518" height="409" key="GridCell.Tab.0.right" timestamp="1596782177517">
+    <state width="2518" height="409" key="GridCell.Tab.0.left/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596798096930" />
+    <state width="2518" height="409" key="GridCell.Tab.0.right" timestamp="1596798096930">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.right/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596782177517" />
+    <state width="2518" height="409" key="GridCell.Tab.0.right/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596798096930" />
     <state x="2816" y="418" width="747" height="591" key="NewModule_or_Project.wizard" timestamp="1596605401567">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -361,14 +390,14 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2683" y="296" width="1024" height="840" key="SettingsEditor/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596623185660" />
-    <state x="2795" y="455" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1596515227460">
+    <state x="2795" y="455" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1596782827723">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2795" y="455" width="800" height="523" key="Vcs.Push.Dialog.v2/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596515227460" />
-    <state x="2877" y="471" width="646" height="496" key="find.popup" timestamp="1596617419146">
+    <state x="2795" y="455" width="800" height="523" key="Vcs.Push.Dialog.v2/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596782827723" />
+    <state x="2877" y="471" width="646" height="753" key="find.popup" timestamp="1596795122620">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2877" y="471" width="646" height="496" key="find.popup/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596617419146" />
+    <state x="2877" y="471" width="646" height="753" key="find.popup/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596795122620" />
     <state x="2863" y="328" width="672" height="678" key="search.everywhere.popup" timestamp="1596765594608">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>

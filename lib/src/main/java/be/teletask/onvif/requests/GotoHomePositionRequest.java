@@ -22,6 +22,10 @@ public class GotoHomePositionRequest implements OnvifRequest {
     private OnvifMediaProfile mediaProfile;
 
     //Constructors
+    public GotoHomePositionRequest(OnvifMediaProfile mediaProfile) {
+        this.mediaProfile = mediaProfile;
+    }
+
     public GotoHomePositionRequest(OnvifMediaProfile mediaProfile, OnvifBlankResponseListener listener) {
         super();
         this.mediaProfile = mediaProfile;

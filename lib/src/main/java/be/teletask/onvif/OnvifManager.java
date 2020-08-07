@@ -51,8 +51,23 @@ public class OnvifManager implements OnvifResponseListener {
         executor.sendRequest(device, request);
     }
 
+    public void getSnapshotURI(OnvifDevice device, OnvifMediaProfile profile, OnvifSnapshotURIListener listener) {
+        OnvifRequest request = new GetSnapshotUriRequest(profile, listener);
+        executor.sendRequest(device, request);
+    }
+
     public void gotoHomePosition(OnvifDevice device, OnvifMediaProfile profile, OnvifBlankResponseListener listener) {
         OnvifRequest request = new GotoHomePositionRequest(profile, listener);
+        executor.sendRequest(device, request);
+    }
+
+    public void gotoHomePosition(OnvifDevice device, OnvifMediaProfile profile) {
+        OnvifRequest request = new GotoHomePositionRequest(profile);
+        executor.sendRequest(device, request);
+    }
+
+    public void absoluteMove(OnvifDevice device, OnvifMediaProfile profile, double pan, double tilt, double zoom) {
+        OnvifRequest request = new AbsoluteMoveRequest(profile, pan, tilt, zoom);
         executor.sendRequest(device, request);
     }
 
