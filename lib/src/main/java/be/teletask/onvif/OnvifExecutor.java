@@ -143,6 +143,11 @@ public class OnvifExecutor {
                 getSnapshotUriRequest.getListener().onSnapshotURIReceived(device, getSnapshotUriRequest.getMediaProfile(),
                         new GetSnapshotUriParser().parse(response));
                 break;
+            case GET_STATUS:
+                GetStatusRequest getStatusRequest = (GetStatusRequest) response.request();
+                getStatusRequest.getListener().onStatusReceived(device, getStatusRequest.getMediaProfile(),
+                        new GetStatusParser().parse(response));
+                break;
             case GOTO_HOME_POSITION:
                 ((GotoHomePositionRequest) response.request()).getListener().onResponse(device, response);
                 break;
