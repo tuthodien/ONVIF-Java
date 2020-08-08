@@ -1,6 +1,6 @@
 package be.teletask.onvif.requests;
 
-import be.teletask.onvif.listeners.OnvifBlankResponseListener;
+import be.teletask.onvif.listeners.OnvifResponseListener;
 import be.teletask.onvif.models.OnvifMediaProfile;
 import be.teletask.onvif.models.OnvifType;
 import lombok.Getter;
@@ -18,7 +18,7 @@ public class GotoHomePositionRequest implements OnvifRequest {
     public static final String TAG = GotoHomePositionRequest.class.getSimpleName();
 
     //Attributes
-    private OnvifBlankResponseListener listener;
+    private OnvifResponseListener listener;
     private OnvifMediaProfile mediaProfile;
 
     //Constructors
@@ -26,7 +26,7 @@ public class GotoHomePositionRequest implements OnvifRequest {
         this.mediaProfile = mediaProfile;
     }
 
-    public GotoHomePositionRequest(OnvifMediaProfile mediaProfile, OnvifBlankResponseListener listener) {
+    public GotoHomePositionRequest(OnvifMediaProfile mediaProfile, OnvifResponseListener listener) {
         super();
         this.mediaProfile = mediaProfile;
         this.listener = listener;

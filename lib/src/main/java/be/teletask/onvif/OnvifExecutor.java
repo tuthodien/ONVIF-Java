@@ -148,12 +148,6 @@ public class OnvifExecutor {
                 getStatusRequest.getListener().onStatusReceived(device, getStatusRequest.getMediaProfile(),
                         new GetStatusParser().parse(response));
                 break;
-            case GOTO_HOME_POSITION:
-                ((GotoHomePositionRequest) response.request()).getListener().onResponse(device, response);
-                break;
-            case ABSOLUTE_MOVE:
-                ((AbsoluteMoveRequest) response.request()).getListener().onResponse(device, response);
-                break;
             default:
                 onvifResponseListener.onResponse(device, response);
                 break;
@@ -174,17 +168,15 @@ public class OnvifExecutor {
 
     private String getPathForRequest(OnvifDevice device, OnvifRequest request) {
         switch (request.getType()) {
-            case GET_SERVICES:
-                return device.getPath().getServicesPath();
             case GET_DEVICE_INFORMATION:
                 return device.getPath().getDeviceInformationPath();
             case GET_MEDIA_PROFILES:
                 return device.getPath().getProfilesPath();
             case GET_STREAM_URI:
                 return device.getPath().getStreamURIPath();
+            default:
+                return device.getPath().getServicesPath();
         }
-
-        return device.getPath().getServicesPath();
     }
 
     private String bodyToString(Request request) {

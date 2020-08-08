@@ -1,6 +1,6 @@
 package be.teletask.onvif.requests;
 
-import be.teletask.onvif.listeners.OnvifBlankResponseListener;
+import be.teletask.onvif.listeners.OnvifResponseListener;
 import be.teletask.onvif.models.OnvifMediaProfile;
 import be.teletask.onvif.models.OnvifType;
 import lombok.Getter;
@@ -17,7 +17,7 @@ public class AbsoluteMoveRequest implements OnvifRequest {
     public static final String TAG = AbsoluteMoveRequest.class.getSimpleName();
 
     //Attributes
-    private OnvifBlankResponseListener listener;
+    private OnvifResponseListener listener;
     private OnvifMediaProfile mediaProfile;
     private double pan = 0, tilt = 0, zoom = 0;
 
@@ -29,7 +29,7 @@ public class AbsoluteMoveRequest implements OnvifRequest {
         this.zoom = zoom;
     }
 
-    public AbsoluteMoveRequest(OnvifMediaProfile mediaProfile, double pan, double tilt, double zoom, OnvifBlankResponseListener listener) {
+    public AbsoluteMoveRequest(OnvifMediaProfile mediaProfile, double pan, double tilt, double zoom, OnvifResponseListener listener) {
         this.mediaProfile = mediaProfile;
         this.pan = pan;
         this.tilt = tilt;

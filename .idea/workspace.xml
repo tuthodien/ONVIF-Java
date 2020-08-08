@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3da168ea-4515-4ea8-8ef3-e4a8260bf872" name="Default Changelist" comment="impl gotoHomePosition, GetSnapshotUri, AbsoluteMove">
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/listeners/OnvifStatusListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/parsers/GetStatusParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GetStatusRequest.java" afterDir="false" />
+    <list default="true" id="3da168ea-4515-4ea8-8ef3-e4a8260bf872" name="Default Changelist" comment="impl GetStatus">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -39,7 +35,10 @@
       <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifType.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/listeners/OnvifBlankResponseListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/parsers/GetStatusParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/parsers/GetStatusParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/AbsoluteMoveRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/AbsoluteMoveRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GotoHomePositionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GotoHomePositionRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +141,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../seas" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.30229884" />
@@ -283,7 +283,8 @@
       <workItem from="1596718514412" duration="878000" />
       <workItem from="1596758564927" duration="14425000" />
       <workItem from="1596778754884" duration="2625000" />
-      <workItem from="1596781482013" duration="15952000" />
+      <workItem from="1596781482013" duration="16334000" />
+      <workItem from="1596879538880" duration="7465000" />
     </task>
     <task id="LOCAL-00001" summary="Update version comments">
       <created>1596515225471</created>
@@ -306,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596798257544</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="impl GetStatus">
+      <created>1596810048151</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596810048151</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +346,8 @@
     <MESSAGE value="Update version comments" />
     <MESSAGE value="apply lombok DSL and add gotoHomePosition PTZ command" />
     <MESSAGE value="impl gotoHomePosition, GetSnapshotUri, AbsoluteMove" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl gotoHomePosition, GetSnapshotUri, AbsoluteMove" />
+    <MESSAGE value="impl GetStatus" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl GetStatus" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3008" y="438" width="494" height="556" key="#com.intellij.ide.util.MemberChooser" timestamp="1596802971387">
@@ -353,54 +362,58 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2640" y="0" width="1110" height="1434" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596784233148" />
-    <state x="3440" y="579" key="#xdebugger.evaluate" timestamp="1596808830515">
+    <state x="2933" y="469" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596892671286">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3440" y="579" key="#xdebugger.evaluate/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596808830515" />
+    <state x="2933" y="469" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596892671286" />
+    <state x="3440" y="579" key="#xdebugger.evaluate" timestamp="1596895533051">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3440" y="579" key="#xdebugger.evaluate/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596895533051" />
     <state x="2793" y="318" width="803" height="797" key="CommitChangelistDialog2" timestamp="1596622852111">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2793" y="318" width="803" height="797" key="CommitChangelistDialog2/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596622852111" />
-    <state x="2422" y="270" width="1536" height="889" key="DiffContextDialog" timestamp="1596622760440">
+    <state x="2422" y="270" width="1536" height="889" key="DiffContextDialog" timestamp="1596893547715">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2422" y="270" width="1536" height="889" key="DiffContextDialog/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596622760440" />
+    <state x="2422" y="270" width="1536" height="889" key="DiffContextDialog/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596893547715" />
     <state x="2964" y="460" width="451" height="506" key="FileChooserDialogImpl" timestamp="1596782302839">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2964" y="460" width="451" height="506" key="FileChooserDialogImpl/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596782302839" />
-    <state width="2518" height="409" key="GridCell.Tab.0.bottom" timestamp="1596809765958">
+    <state width="2518" height="409" key="GridCell.Tab.0.bottom" timestamp="1596896303070">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.bottom/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596809765957" />
-    <state width="2518" height="409" key="GridCell.Tab.0.center" timestamp="1596809765957">
+    <state width="2518" height="409" key="GridCell.Tab.0.bottom/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896303070" />
+    <state width="2518" height="409" key="GridCell.Tab.0.center" timestamp="1596896303069">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.center/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596809765957" />
-    <state width="2518" height="409" key="GridCell.Tab.0.left" timestamp="1596809765957">
+    <state width="2518" height="409" key="GridCell.Tab.0.center/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896303069" />
+    <state width="2518" height="409" key="GridCell.Tab.0.left" timestamp="1596896303069">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.left/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596809765957" />
-    <state width="2518" height="409" key="GridCell.Tab.0.right" timestamp="1596809765957">
+    <state width="2518" height="409" key="GridCell.Tab.0.left/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896303069" />
+    <state width="2518" height="409" key="GridCell.Tab.0.right" timestamp="1596896303070">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.right/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596809765957" />
-    <state width="2518" height="502" key="GridCell.Tab.1.bottom" timestamp="1596809641937">
+    <state width="2518" height="409" key="GridCell.Tab.0.right/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896303070" />
+    <state width="2518" height="502" key="GridCell.Tab.1.bottom" timestamp="1596896025372">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="502" key="GridCell.Tab.1.bottom/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596809641937" />
-    <state width="2518" height="502" key="GridCell.Tab.1.center" timestamp="1596809641936">
+    <state width="2518" height="502" key="GridCell.Tab.1.bottom/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896025372" />
+    <state width="2518" height="502" key="GridCell.Tab.1.center" timestamp="1596896025372">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="502" key="GridCell.Tab.1.center/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596809641936" />
-    <state width="2518" height="502" key="GridCell.Tab.1.left" timestamp="1596809641936">
+    <state width="2518" height="502" key="GridCell.Tab.1.center/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896025372" />
+    <state width="2518" height="502" key="GridCell.Tab.1.left" timestamp="1596896025372">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="502" key="GridCell.Tab.1.left/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596809641936" />
-    <state width="2518" height="502" key="GridCell.Tab.1.right" timestamp="1596809641936">
+    <state width="2518" height="502" key="GridCell.Tab.1.left/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896025372" />
+    <state width="2518" height="502" key="GridCell.Tab.1.right" timestamp="1596896025372">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="502" key="GridCell.Tab.1.right/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596809641936" />
+    <state width="2518" height="502" key="GridCell.Tab.1.right/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896025372" />
     <state x="2816" y="418" width="747" height="591" key="NewModule_or_Project.wizard" timestamp="1596605401567">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -409,18 +422,22 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2683" y="296" width="1024" height="840" key="SettingsEditor/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596623185660" />
-    <state x="2795" y="455" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1596798259306">
+    <state x="2795" y="455" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1596810049719">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2795" y="455" width="800" height="523" key="Vcs.Push.Dialog.v2/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596798259306" />
+    <state x="2795" y="455" width="800" height="523" key="Vcs.Push.Dialog.v2/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596810049719" />
     <state width="1280" height="720" key="XDebugger.FullValuePopup" timestamp="1596804142329">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="1280" height="720" key="XDebugger.FullValuePopup/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596804142329" />
-    <state x="2877" y="471" width="646" height="753" key="find.popup" timestamp="1596798419503">
+    <state x="2877" y="471" width="646" height="753" key="find.popup" timestamp="1596892169140">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2877" y="471" width="646" height="753" key="find.popup/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596798419503" />
+    <state x="2877" y="471" width="646" height="753" key="find.popup/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596892169140" />
+    <state x="2864" y="338" key="run.anything.popup" timestamp="1596891910574">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2864" y="338" key="run.anything.popup/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596891910574" />
     <state x="2863" y="328" width="672" height="678" key="search.everywhere.popup" timestamp="1596765594608">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
