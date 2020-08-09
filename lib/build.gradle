@@ -73,8 +73,8 @@ archivesBaseName = 'onvif'
 
 modifyPom {
     project {
-        name 'teachUpload'
-        description 'Teaching how to use gradle.'
+        name 'ONVIF Camera'
+        description 'A Java library to discover, control and manage ONVIF-supported PTZ Cameras'
         url 'https://github.com/03/ONVIF-Java'
         inceptionYear '2020'
 
