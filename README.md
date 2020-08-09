@@ -1,6 +1,5 @@
 # ONVIF-Java
 ---
-[ ![Download](https://api.bintray.com/packages/tomasverhelst/ONVIF-Java/ONVIF-Java/images/download.svg) ](https://bintray.com/tomasverhelst/ONVIF-Java/ONVIF-Java/_latestVersion)
 
 <p align="center"> 
 <img src="https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/112012/onvif-converted.png?itok=yqR6_a6G">
@@ -12,7 +11,7 @@ ONVIF is an open industry forum that provides and promotes standardized interfac
 ## Features
 
   - **ONVIF & UPnP discovery**
-  - ONVIF device management (Services, device information, media profiles, raw media stream uri)
+  - ONVIF device management (Services, device information, media profiles, raw media stream uri, snapshot uri, device status, PTZ Commands such as absoluteMove)
   - UPnP device information
   - Easily extendable with your own requests
   - **Android supported!**
@@ -127,7 +126,27 @@ uPnPManager.getDeviceInformation(device, new UPnPDeviceInformationListener() {
 });
 ```
 
-## Custom requests
+## PTZ Commands
+---
+
+absoluteMove
+
+```java
+onvifManager.absoluteMove(device, mediaProfiles.get(0), 0.1f, 0.59f, 0.2f);
+```
+## Device Status
+---
+
+getStatus
+
+```java
+onvifManager.getStatus(device, mediaProfiles.get(0), (onvifDevice, profile, status) -> {
+                log.info("onStatusReceived: pan:" + status.getPan() + " tilt:" + status.getTilt() + " zoom:" + status.getZoom());
+            });
+```
+
+
+## Custom Requests
 ---
 
 It is possible to implement your custom ONVIF request by creating a new class and implementing the ```OnvifRequest``` interface and overriding the ```getXml()``` and ```getType()``` methods.
@@ -178,18 +197,17 @@ Download [the latest JAR][2] or grab via Maven:
 <dependency>
   <groupId>com.github.03</groupId>
   <artifactId>onvif</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
 </dependency>
 ```
 or Gradle:
 ```groovy
-compile 'com.github.03:onvif:1.0.3'
+compile 'com.github.03:onvif:1.0.4'
 ```
 
 ## Todos
 
  - Implementation ONVIF version management
- - Implementation PTZ
 
 ## Pull Requests
 ---
@@ -212,5 +230,5 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
     
-[2]: https://bintray.com/tomasverhelst/ONVIF-Java/ONVIF-Java/1.0.0#files/be/teletask/onvif/onvif/1.0.0
+[2]: https://repo.maven.apache.org/maven2/com/github/03/onvif/1.0.4/onvif-1.0.4.jar
 
