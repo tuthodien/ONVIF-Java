@@ -37,37 +37,43 @@ public class GetPresetsParser extends OnvifParser<List<OnvifPreset>> {
             eventType = getXpp().getEventType();
             while (eventType != XmlPullParser.END_DOCUMENT) {
 
+                OnvifPreset onvifPreset = new OnvifPreset();
+
                 if (eventType == XmlPullParser.START_TAG && getXpp().getName().equals(KEY_PRESET)) {
 
                     String token = getXpp().getAttributeValue(null, ATTR_TOKEN);
+                    onvifPreset.setToken(token);
                     getXpp().nextTag();
 
                     if (getXpp().getName().equals(ATTR_NAME)) {
                         getXpp().next();
                         String name = getXpp().getText();
-                        presets.add(new OnvifPreset(token, name));
+                        onvifPreset.setName(name);
+                        // move to the end of current tag
+                        getXpp().nextTag();
                     }
 
-                }
+                    getXpp().nextTag();
+                    if (getXpp().getName().equals(KEY_POSITION)) {
 
+                        getXpp().nextTag();
+                        if (getXpp().getName().equals(KEY_POSITION_PANTILT)) {
 
-                /*if (eventType == XmlPullParser.START_TAG && getXpp().getName().equals(KEY_POSITION_PANTILT)) {
-                    for (int i = 0; i < getXpp().getAttributeCount(); i++) {
-                        if (getXpp().getAttributeName(i).equals("x")) {
-                            onvifPreset.setPan(Double.valueOf(getXpp().getAttributeValue(i)));
-                        } else if (getXpp().getAttributeName(i).equals("y")) {
-                            onvifPreset.setTilt(Double.valueOf(getXpp().getAttributeValue(i)));
+                            onvifPreset.setPan(Double.valueOf(getXpp().getAttributeValue(null, "x")));
+                            onvifPreset.setTilt(Double.valueOf(getXpp().getAttributeValue(null, "y")));
+                            getXpp().nextTag();
                         }
-                    }
-                } else if (eventType == XmlPullParser.START_TAG && getXpp().getName().equals(KEY_POSITION_ZOOM)) {
-                    for (int i = 0; i < getXpp().getAttributeCount(); i++) {
-                        if (getXpp().getAttributeName(i).equals("x")) {
-                            onvifPreset.setZoom(Double.valueOf(getXpp().getAttributeValue(i)));
+
+                        getXpp().nextTag();
+                        if (getXpp().getName().equals(KEY_POSITION_ZOOM)) {
+                            onvifPreset.setZoom(Double.valueOf(getXpp().getAttributeValue(null, "x")));
                         }
+                        getXpp().nextTag();
+
                     }
-                } else if (eventType == XmlPullParser.END_TAG && getXpp().getName().equals(KEY_POSITION)) {
+
                     presets.add(onvifPreset);
-                }*/
+                }
 
                 eventType = getXpp().next();
             }

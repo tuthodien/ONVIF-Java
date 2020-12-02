@@ -145,6 +145,16 @@ onvifManager.getStatus(device, mediaProfiles.get(0), (onvifDevice, profile, stat
             });
 ```
 
+## Get Presets
+---
+
+getStatus
+
+```java
+onvifManager.getPresets(device, mediaProfiles.get(0), (onvifDevice, profile, presets) -> {
+                log.info("presets size: " + presets.size());
+            });
+```
 
 ## Custom Requests
 ---
@@ -197,12 +207,12 @@ Download [the latest JAR][2] or grab via Maven:
 <dependency>
   <groupId>com.github.03</groupId>
   <artifactId>onvif</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
 </dependency>
 ```
 or Gradle:
 ```groovy
-compile 'com.github.03:onvif:1.0.4'
+compile 'com.github.03:onvif:1.0.5'
 ```
 
 ## Todos
@@ -230,5 +240,5 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
     
-[2]: https://repo.maven.apache.org/maven2/com/github/03/onvif/1.0.4/onvif-1.0.4.jar
+[2]: https://repo.maven.apache.org/maven2/com/github/03/onvif/1.0.5/onvif-1.0.5.jar
 

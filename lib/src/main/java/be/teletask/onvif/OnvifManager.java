@@ -3,6 +3,7 @@ package be.teletask.onvif;
 import be.teletask.onvif.listeners.*;
 import be.teletask.onvif.models.OnvifDevice;
 import be.teletask.onvif.models.OnvifMediaProfile;
+import be.teletask.onvif.models.OnvifPreset;
 import be.teletask.onvif.requests.*;
 import be.teletask.onvif.responses.OnvifResponse;
 
@@ -68,6 +69,11 @@ public class OnvifManager implements OnvifResponseListener {
 
     public void gotoHomePosition(OnvifDevice device, OnvifMediaProfile profile) {
         OnvifRequest request = new GotoHomePositionRequest(profile);
+        executor.sendRequest(device, request);
+    }
+
+    public void gotoPreset(OnvifDevice device, OnvifMediaProfile profile, OnvifPreset preset) {
+        OnvifRequest request = new GotoPresetRequest(profile, preset);
         executor.sendRequest(device, request);
     }
 
