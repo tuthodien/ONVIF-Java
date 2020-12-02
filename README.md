@@ -148,7 +148,7 @@ onvifManager.getStatus(device, mediaProfiles.get(0), (onvifDevice, profile, stat
 ## Get Presets
 ---
 
-getStatus
+getPresets
 
 ```java
 onvifManager.getPresets(device, mediaProfiles.get(0), (onvifDevice, profile, presets) -> {
