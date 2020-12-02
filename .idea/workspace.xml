@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,9 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3da168ea-4515-4ea8-8ef3-e4a8260bf872" name="Default Changelist" comment="impl GetStatus">
+    <list default="true" id="3da168ea-4515-4ea8-8ef3-e4a8260bf872" name="Default Changelist" comment="readme update for release 1.0.4">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/listeners/OnvifPresetsListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifPreset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifPresets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/parsers/GetPresetsParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GetPresetsRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -34,7 +42,9 @@
       <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifType.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,23 +60,7 @@
     <option name="done" value="true" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
+    <execution />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -87,7 +81,23 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="onvif" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="onvif" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="onvif" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -97,6 +107,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="820ec6fa-a0e2-41f7-a3d3-3581aaef77df" />
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -115,7 +126,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/lib/build/delombok/main/be/teletask/onvif/parsers/GetStatusParser.java" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../seas" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -124,8 +142,8 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="be.teletask.onvif.models" />
-      <recent name="be.teletask.onvif.parsers" />
       <recent name="be.teletask.onvif.listeners" />
+      <recent name="be.teletask.onvif.parsers" />
       <recent name="be.teletask.onvif.requests" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -136,8 +154,8 @@
   <component name="RubyModuleManagerSettings">
     <option name="blackListedRootsPaths">
       <list>
-        <option value="$PROJECT_DIR$/lib" />
         <option value="$PROJECT_DIR$" />
+        <option value="$PROJECT_DIR$/lib" />
       </list>
     </option>
   </component>
@@ -151,6 +169,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -233,14 +262,15 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GetStatusParser" />
         <item itemvalue="Gradle.lib [jar]" />
+        <item itemvalue="Gradle.lib [build]" />
+        <item itemvalue="Application.GetStatusParser" />
         <item itemvalue="Gradle.lib [uploadArchives]" />
         <item itemvalue="Gradle.lib [clean]" />
-        <item itemvalue="Gradle.lib [build]" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -260,7 +290,13 @@
       <workItem from="1596778754884" duration="2625000" />
       <workItem from="1596781482013" duration="16334000" />
       <workItem from="1596879538880" duration="7639000" />
-      <workItem from="1596931113614" duration="1563000" />
+      <workItem from="1596931113614" duration="3045000" />
+      <workItem from="1597017609702" duration="2292000" />
+      <workItem from="1606348187382" duration="1004000" />
+      <workItem from="1606364712354" duration="1176000" />
+      <workItem from="1606431894125" duration="1238000" />
+      <workItem from="1606867636898" duration="54000" />
+      <workItem from="1606872730595" duration="11311000" />
     </task>
     <task id="LOCAL-00001" summary="Update version comments">
       <created>1596515225471</created>
@@ -297,11 +333,25 @@
       <option name="project" value="LOCAL" />
       <updated>1596896440945</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="readme update for release 1.0.4">
+      <created>1596933025382</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1596933025382</updated>
+    </task>
+    <task id="LOCAL-00007" summary="readme update for release 1.0.4">
+      <created>1596933509351</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1596933509351</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -330,100 +380,47 @@
     <MESSAGE value="apply lombok DSL and add gotoHomePosition PTZ command" />
     <MESSAGE value="impl gotoHomePosition, GetSnapshotUri, AbsoluteMove" />
     <MESSAGE value="impl GetStatus" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl GetStatus" />
+    <MESSAGE value="readme update for release 1.0.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme update for release 1.0.4" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3008" y="438" width="494" height="556" key="#com.intellij.ide.util.MemberChooser" timestamp="1596802971387">
+    <state x="3008" y="438" width="374" height="556" key="#com.intellij.ide.util.MemberChooser" timestamp="1606890967044">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3008" y="438" width="494" height="556" key="#com.intellij.ide.util.MemberChooser/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596802971387" />
-    <state x="3047" y="611" width="295" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1596513221645">
+    <state x="3008" y="438" width="374" height="556" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606890967044" />
+    <state x="2933" y="469" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606890378417">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3047" y="611" width="295" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596513221645" />
-    <state x="2640" y="0" width="1110" height="1434" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596784233148">
+    <state x="2933" y="469" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606890378417" />
+    <state x="2020" y="99" width="2360" height="1240" key="DiffContextDialog" timestamp="1606884990508">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2640" y="0" width="1110" height="1434" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596784233148" />
-    <state x="2933" y="469" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596892671286">
+    <state x="2020" y="99" width="2360" height="1240" key="DiffContextDialog/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606884990508" />
+    <state width="2518" height="409" key="GridCell.Tab.0.bottom" timestamp="1606907227884">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2933" y="469" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596892671286" />
-    <state x="3440" y="579" key="#xdebugger.evaluate" timestamp="1596895533051">
+    <state width="2518" height="409" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606907227884" />
+    <state width="2518" height="409" key="GridCell.Tab.0.center" timestamp="1606907227884">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3440" y="579" key="#xdebugger.evaluate/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596895533051" />
-    <state x="2793" y="318" width="803" height="797" key="CommitChangelistDialog2" timestamp="1596622852111">
+    <state width="2518" height="409" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606907227884" />
+    <state width="2518" height="409" key="GridCell.Tab.0.left" timestamp="1606907227884">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2793" y="318" width="803" height="797" key="CommitChangelistDialog2/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596622852111" />
-    <state x="2422" y="270" width="1536" height="889" key="DiffContextDialog" timestamp="1596896451141">
+    <state width="2518" height="409" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606907227884" />
+    <state width="2518" height="409" key="GridCell.Tab.0.right" timestamp="1606907227884">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2422" y="270" width="1536" height="889" key="DiffContextDialog/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896451141" />
-    <state x="2964" y="460" width="451" height="506" key="FileChooserDialogImpl" timestamp="1596782302839">
+    <state width="2518" height="409" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606907227884" />
+    <state x="2745" y="503" width="1180" height="720" key="find.popup" timestamp="1606891407087">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2964" y="460" width="451" height="506" key="FileChooserDialogImpl/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596782302839" />
-    <state width="2518" height="502" key="GridCell.Tab.0.bottom" timestamp="1596896527269">
-      <screen x="1920" y="0" width="2560" height="1440" />
+    <state x="619" y="363" width="557" height="502" key="find.popup/0.0.1920.1040/1920.0.2560.1440@0.0.1920.1040" timestamp="1606365188473" />
+    <state x="2745" y="503" width="1180" height="720" key="find.popup/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606891407087" />
+    <state x="707" y="237" width="672" height="490" key="search.everywhere.popup" timestamp="1606365173013">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="2518" height="502" key="GridCell.Tab.0.bottom/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896527269" />
-    <state width="2518" height="502" key="GridCell.Tab.0.center" timestamp="1596896527269">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="502" key="GridCell.Tab.0.center/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896527269" />
-    <state width="2518" height="502" key="GridCell.Tab.0.left" timestamp="1596896527269">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="502" key="GridCell.Tab.0.left/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896527269" />
-    <state width="2518" height="502" key="GridCell.Tab.0.right" timestamp="1596896527269">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="502" key="GridCell.Tab.0.right/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896527269" />
-    <state width="2518" height="502" key="GridCell.Tab.1.bottom" timestamp="1596896527270">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="502" key="GridCell.Tab.1.bottom/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896527270" />
-    <state width="2518" height="502" key="GridCell.Tab.1.center" timestamp="1596896527269">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="502" key="GridCell.Tab.1.center/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896527269" />
-    <state width="2518" height="502" key="GridCell.Tab.1.left" timestamp="1596896527269">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="502" key="GridCell.Tab.1.left/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896527269" />
-    <state width="2518" height="502" key="GridCell.Tab.1.right" timestamp="1596896527270">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="502" key="GridCell.Tab.1.right/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896527270" />
-    <state x="2816" y="418" width="747" height="591" key="NewModule_or_Project.wizard" timestamp="1596605401567">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state x="2816" y="418" width="747" height="591" key="NewModule_or_Project.wizard/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596605401567" />
-    <state x="2683" y="296" width="1024" height="840" key="SettingsEditor" timestamp="1596623185660">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state x="2683" y="296" width="1024" height="840" key="SettingsEditor/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596623185660" />
-    <state x="2795" y="455" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1596896453977">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state x="2795" y="455" width="800" height="523" key="Vcs.Push.Dialog.v2/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596896453977" />
-    <state width="1280" height="720" key="XDebugger.FullValuePopup" timestamp="1596804142329">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state width="1280" height="720" key="XDebugger.FullValuePopup/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596804142329" />
-    <state x="2877" y="471" width="646" height="753" key="find.popup" timestamp="1596892169140">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state x="2877" y="471" width="646" height="753" key="find.popup/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596892169140" />
-    <state x="2864" y="338" key="run.anything.popup" timestamp="1596891910574">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state x="2864" y="338" key="run.anything.popup/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596891910574" />
-    <state x="2863" y="328" width="672" height="678" key="search.everywhere.popup" timestamp="1596765594608">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state x="2863" y="328" width="672" height="678" key="search.everywhere.popup/0.360.1920.1080/1920.0.2560.1440@1920.0.2560.1440" timestamp="1596765594608" />
+    <state x="707" y="237" width="672" height="490" key="search.everywhere.popup/0.0.1920.1040/1920.0.2560.1440@0.0.1920.1040" timestamp="1606365173013" />
+    <state x="2863" y="328" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606348258545" />
   </component>
 </project>
