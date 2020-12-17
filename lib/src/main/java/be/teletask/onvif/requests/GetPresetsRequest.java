@@ -32,7 +32,7 @@ public class GetPresetsRequest implements OnvifRequest {
     @Override
     public String getXml() {
         return "<GetPresets xmlns=\"http://www.onvif.org/ver20/ptz/wsdl\">" +
-                "<ProfileToken>" + mediaProfile.getToken() + "</ProfileToken >" +
+                "<ProfileToken>" + mediaProfile.getToken() + "</ProfileToken>" +
                 "</GetPresets>";
     }
 

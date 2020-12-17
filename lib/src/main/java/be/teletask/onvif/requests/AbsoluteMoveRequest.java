@@ -42,7 +42,7 @@ public class AbsoluteMoveRequest implements OnvifRequest {
     @Override
     public String getXml() {
         return "<AbsoluteMove xmlns=\"http://www.onvif.org/ver20/ptz/wsdl\">" +
-                "<ProfileToken>" + mediaProfile.getToken() + "</ProfileToken >" +
+                "<ProfileToken>" + mediaProfile.getToken() + "</ProfileToken>" +
                 "<Position> " +
                 "<PanTilt x=\"" + pan + "\" y=\"" + tilt + "\" xmlns=\"http://www.onvif.org/ver10/schema\" />" +
                 "<Zoom x=\"" + zoom + "\" xmlns=\"http://www.onvif.org/ver10/schema\" />" +

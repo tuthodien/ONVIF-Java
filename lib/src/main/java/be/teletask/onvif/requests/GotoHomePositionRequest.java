@@ -37,7 +37,7 @@ public class GotoHomePositionRequest implements OnvifRequest {
     @Override
     public String getXml() {
         return "<GotoHomePosition xmlns=\"http://www.onvif.org/ver20/ptz/wsdl\">" +
-                "<ProfileToken>" + mediaProfile.getToken() + "</ProfileToken >" +
+                "<ProfileToken>" + mediaProfile.getToken() + "</ProfileToken>" +
                 "</GotoHomePosition>";
     }
 

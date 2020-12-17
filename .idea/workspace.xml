@@ -22,11 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3da168ea-4515-4ea8-8ef3-e4a8260bf872" name="Default Changelist" comment="add GET_PRESETS">
+    <list default="true" id="3da168ea-4515-4ea8-8ef3-e4a8260bf872" name="Default Changelist" comment="add GotoPreset Cmd">
       <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GotoPresetRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/SetPresetRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -36,12 +36,12 @@
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifPresets.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/parsers/GetPresetsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/parsers/GetPresetsParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/AbsoluteMoveRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/AbsoluteMoveRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GetPresetsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GetPresetsRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GetStatusRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GetStatusRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GotoHomePositionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GotoHomePositionRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GotoPresetRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GotoPresetRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,20 +132,20 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.30229884" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="be.teletask.onvif.requests" />
       <recent name="be.teletask.onvif.models" />
       <recent name="be.teletask.onvif.listeners" />
       <recent name="be.teletask.onvif.parsers" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RubyModuleManagerSettings">
@@ -156,27 +156,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.lib [jar]">
-    <configuration name="GetStatusParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="be.teletask.onvif.parsers.GetStatusParser" />
-      <module name="onvif.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="be.teletask.onvif.parsers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Gradle.lib [build]">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -197,7 +186,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="lib [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -216,7 +207,30 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="lib [closeAndReleaseRepository]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lib" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="closeAndReleaseRepository" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="lib [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -235,10 +249,12 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="lib [uploadArchives]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="lib [releaseRepository]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/lib" />
@@ -249,21 +265,23 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="uploadArchives" />
+            <option value="releaseRepository" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.lib [jar]" />
         <item itemvalue="Gradle.lib [build]" />
-        <item itemvalue="Application.GetStatusParser" />
-        <item itemvalue="Gradle.lib [uploadArchives]" />
         <item itemvalue="Gradle.lib [clean]" />
+        <item itemvalue="Gradle.lib [jar]" />
+        <item itemvalue="Gradle.lib [releaseRepository]" />
+        <item itemvalue="Gradle.lib [closeAndReleaseRepository]" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +311,14 @@
       <workItem from="1606364712354" duration="1176000" />
       <workItem from="1606431894125" duration="1238000" />
       <workItem from="1606867636898" duration="54000" />
-      <workItem from="1606872730595" duration="15571000" />
+      <workItem from="1606872730595" duration="15659000" />
+      <workItem from="1606946688974" duration="6363000" />
+      <workItem from="1606993195480" duration="991000" />
+      <workItem from="1606996521575" duration="228000" />
+      <workItem from="1607038862026" duration="1302000" />
+      <workItem from="1607314979759" duration="1019000" />
+      <workItem from="1608019978376" duration="1545000" />
+      <workItem from="1608180760345" duration="5861000" />
     </task>
     <task id="LOCAL-00001" summary="Update version comments">
       <created>1596515225471</created>
@@ -351,7 +376,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606910092472</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add GotoPreset Cmd">
+      <created>1606915131154</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1606915131154</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Prepare for 1.0.5 release">
+      <created>1606947418895</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1606947418895</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,50 +425,8 @@
     <MESSAGE value="impl GetStatus" />
     <MESSAGE value="readme update for release 1.0.4" />
     <MESSAGE value="add GET_PRESETS" />
-    <option name="LAST_COMMIT_MESSAGE" value="add GET_PRESETS" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="3008" y="438" width="374" height="556" key="#com.intellij.ide.util.MemberChooser" timestamp="1606910571450">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state x="3008" y="438" width="374" height="556" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606910571450" />
-    <state x="2933" y="469" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606890378417">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state x="2933" y="469" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606890378417" />
-    <state x="2020" y="99" width="2360" height="1240" key="DiffContextDialog" timestamp="1606884990508">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state x="2020" y="99" width="2360" height="1240" key="DiffContextDialog/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606884990508" />
-    <state width="2518" height="409" key="GridCell.Tab.0.bottom" timestamp="1606914711126">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606914711126" />
-    <state width="2518" height="409" key="GridCell.Tab.0.center" timestamp="1606914711125">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606914711125" />
-    <state width="2518" height="409" key="GridCell.Tab.0.left" timestamp="1606914711125">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606914711125" />
-    <state width="2518" height="409" key="GridCell.Tab.0.right" timestamp="1606914711126">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606914711126" />
-    <state x="2795" y="455" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1606910094440">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state x="2795" y="455" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606910094440" />
-    <state x="2745" y="503" width="1180" height="720" key="find.popup" timestamp="1606915078780">
-      <screen x="1920" y="0" width="2560" height="1440" />
-    </state>
-    <state x="619" y="363" width="557" height="502" key="find.popup/0.0.1920.1040/1920.0.2560.1440@0.0.1920.1040" timestamp="1606365188473" />
-    <state x="2745" y="503" width="1180" height="720" key="find.popup/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606915078780" />
-    <state x="707" y="237" width="672" height="490" key="search.everywhere.popup" timestamp="1606365173013">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="707" y="237" width="672" height="490" key="search.everywhere.popup/0.0.1920.1040/1920.0.2560.1440@0.0.1920.1040" timestamp="1606365173013" />
-    <state x="2863" y="328" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606348258545" />
+    <MESSAGE value="add GotoPreset Cmd" />
+    <MESSAGE value="Prepare for 1.0.5 release" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prepare for 1.0.5 release" />
   </component>
 </project>

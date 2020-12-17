@@ -26,12 +26,14 @@ public class GetStatusRequest implements OnvifRequest {
         this.listener = listener;
     }
 
+
+
     //Properties
 
     @Override
     public String getXml() {
         return "<GetStatus xmlns=\"http://www.onvif.org/ver20/ptz/wsdl\">" +
-                "<ProfileToken>" + mediaProfile.getToken() + "</ProfileToken >" +
+                "<ProfileToken>" + mediaProfile.getToken() + "</ProfileToken>" +
                 "</GetStatus>";
     }
 
