@@ -1,7 +1,6 @@
 package be.teletask.onvif.requests;
 
 import be.teletask.onvif.listeners.OnvifPresetsListener;
-import be.teletask.onvif.listeners.OnvifStatusListener;
 import be.teletask.onvif.models.OnvifMediaProfile;
 import be.teletask.onvif.models.OnvifType;
 import lombok.Getter;
