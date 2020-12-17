@@ -153,6 +153,11 @@ public class OnvifExecutor {
                 getPresetsRequest.getListener().onPresetsReceived(device, getPresetsRequest.getMediaProfile(),
                         new GetPresetsParser().parse(response));
                 break;
+            case SET_PRESET:
+                SetPresetRequest setPresetRequest = (SetPresetRequest) response.request();
+                setPresetRequest.getListener().onPresetReceived(device, setPresetRequest.getMediaProfile(),
+                        new SetPresetParser().parse(response));
+                break;
             default:
                 onvifResponseListener.onResponse(device, response);
                 break;

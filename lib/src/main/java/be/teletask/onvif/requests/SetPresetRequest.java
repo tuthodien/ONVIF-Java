@@ -1,5 +1,7 @@
 package be.teletask.onvif.requests;
 
+import be.teletask.onvif.listeners.OnvifPresetListener;
+import be.teletask.onvif.listeners.OnvifStatusListener;
 import be.teletask.onvif.models.OnvifMediaProfile;
 import be.teletask.onvif.models.OnvifType;
 import lombok.Getter;
@@ -16,6 +18,7 @@ public class SetPresetRequest implements OnvifRequest {
     public static final String TAG = SetPresetRequest.class.getSimpleName();
 
     //Attributes
+    private OnvifPresetListener listener;
     private OnvifMediaProfile mediaProfile;
 
     /**
@@ -33,10 +36,11 @@ public class SetPresetRequest implements OnvifRequest {
     private String name = "", token = "";
 
     //Constructors
-    public SetPresetRequest(OnvifMediaProfile mediaProfile, String name, String token) {
+    public SetPresetRequest(OnvifMediaProfile mediaProfile, String name, String token, OnvifPresetListener listener) {
         this.mediaProfile = mediaProfile;
         this.name = name;
         this.token = token;
+        this.listener = listener;
     }
 
     //Properties
@@ -62,7 +66,7 @@ public class SetPresetRequest implements OnvifRequest {
 
     @Override
     public OnvifType getType() {
-        return OnvifType.GET_PRESETS;
+        return OnvifType.SET_PRESET;
     }
 
 }

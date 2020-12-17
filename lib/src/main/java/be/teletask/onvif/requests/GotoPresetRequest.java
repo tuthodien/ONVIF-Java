@@ -47,7 +47,7 @@ public class GotoPresetRequest implements OnvifRequest {
 
     @Override
     public OnvifType getType() {
-        return OnvifType.GOTO_HOME_POSITION;
+        return OnvifType.GOTO_PRESET;
     }
 
 }

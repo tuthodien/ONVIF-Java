@@ -1,43 +1,45 @@
 package be.teletask.onvif.requests;
 
-import be.teletask.onvif.listeners.OnvifStatusListener;
 import be.teletask.onvif.models.OnvifMediaProfile;
 import be.teletask.onvif.models.OnvifType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
- * Created by Luke F on 07/08/2020.
+ * Created by Luke F on 17/12/2020.
  */
 @Getter
 @NoArgsConstructor
-public class GetStatusRequest implements OnvifRequest {
+public class RemovePresetRequest implements OnvifRequest {
 
     //Constants
-    public static final String TAG = GetStatusRequest.class.getSimpleName();
+    public static final String TAG = RemovePresetRequest.class.getSimpleName();
 
     //Attributes
-    private OnvifStatusListener listener;
     private OnvifMediaProfile mediaProfile;
 
+    private String token = "";
+
     //Constructors
-    public GetStatusRequest(OnvifMediaProfile mediaProfile, OnvifStatusListener listener) {
+    public RemovePresetRequest(OnvifMediaProfile mediaProfile, String token) {
         this.mediaProfile = mediaProfile;
-        this.listener = listener;
+        this.token = token;
     }
 
     //Properties
 
     @Override
     public String getXml() {
-        return "<GetStatus xmlns=\"http://www.onvif.org/ver20/ptz/wsdl\">" +
+
+        return "<RemovePreset xmlns=\"http://www.onvif.org/ver20/ptz/wsdl\">" +
                 "<ProfileToken>" + mediaProfile.getToken() + "</ProfileToken>" +
-                "</GetStatus>";
+                "<PresetToken>" + token + "</PresetToken>" +
+                "</RemovePreset>";
     }
 
     @Override
     public OnvifType getType() {
-        return OnvifType.GET_STATUS;
+        return OnvifType.REMOVE_PRESET;
     }
 
 }
