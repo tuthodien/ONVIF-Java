@@ -31,13 +31,13 @@ manager.setDiscoveryTimeout(10000);
 manager.discover(new DiscoveryListener() {
     @Override
     public void onDiscoveryStarted() {
-        System.out.println("Discovery started");
+        log.info("Discovery started");
     }
 
     @Override
     public void onDevicesFound(List<Device> devices) {
         for (Device device : devices)
-            System.out.println("Devices found: " + device.getHostName());
+            log.info("Devices found: " + device.getHostName());
     }
 });
 ```
@@ -50,7 +50,7 @@ With the ```OnvifManager``` class it is possible to send requests to an ONVIF-su
 ```java
 onvifManager = new OnvifManager();
 onvifManager.setOnvifResponseListener(this);
-OnvifDevice device = new OnvifDevice("192.168.0.131", "username", "password");
+OnvifDevice device = new OnvifDevice("192.168.100.142", "username", "password");
 ```
 
 ### Services
@@ -141,7 +141,7 @@ getStatus
 
 ```java
 onvifManager.getStatus(device, mediaProfiles.get(0), (onvifDevice, profile, status) -> {
-    log.info("onStatusReceived: pan:" + status.getPan() + " tilt:" + status.getTilt() + " zoom:" + status.getZoom());
+    log.info("onStatusReceived: pan: {}, tilt: {}, zoom: {}.", status.getPan(), status.getTilt(), status.getZoom());
 });
 ```
 
@@ -152,7 +152,7 @@ getPresets / setPreset / removePreset
 
 ```java
 onvifManager.getPresets(device, mediaProfiles.get(0), (onvifDevice, profile, presets) -> {
-    log.info("presets size: " + presets.size());
+    log.info("presets size: {}", presets.size());
 });
 
 onvifManager.setPreset(device, mediaProfiles.get(0), "presetNameABC", "2", (onvifDevice, onvifMediaProfile, presetToken) -> {
