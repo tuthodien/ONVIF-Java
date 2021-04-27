@@ -8,16 +8,16 @@ public class OnvifServices {
 
     //Constants
     public static final String TAG = OnvifServices.class.getSimpleName();
-    public static final String ONVIF_PATH_SERVICES = "/onvif/device_service";
-    public static final String ONVIF_PATH_DEVICE_INFORMATION = "/onvif/device_service";
-    public static final String ONVIF_PATH_PROFILES = "/onvif/device_service";
-    public static final String ONVIF_PATH_STREAM_URI = "/onvif/device_service";
+    public static final String ONVIF_PATH_SERVICES = "/onvif/services";
+    public static final String ONVIF_PATH_DEVICE_URI = "/onvif/device_service";
+    public static final String ONVIF_PATH_MEDIA_URI = "/onvif/media_service";
+    public static final String ONVIF_PATH_PTZ_URI = "/onvif/ptz_service";
 
     //Attributes
     private String servicesPath = ONVIF_PATH_SERVICES;
-    private String deviceInformationPath = ONVIF_PATH_DEVICE_INFORMATION;
-    private String profilesPath = ONVIF_PATH_PROFILES;
-    private String streamURIPath = ONVIF_PATH_STREAM_URI;
+    private String devicePath = ONVIF_PATH_DEVICE_URI;
+    private String mediaPath = ONVIF_PATH_MEDIA_URI;
+    private String ptzPath = ONVIF_PATH_PTZ_URI;
 
     //Constructors
     public OnvifServices() {
@@ -33,28 +33,27 @@ public class OnvifServices {
         this.servicesPath = servicesPath;
     }
 
-    public String getDeviceInformationPath() {
-        return deviceInformationPath;
+    public String getDevicePath() {
+        return devicePath;
     }
 
-    public void setDeviceInformationPath(String deviceInformationPath) {
-        this.deviceInformationPath = deviceInformationPath;
+    public void setDevicePath(String devicePath) {
+        this.devicePath = devicePath;
     }
 
-    public String getProfilesPath() {
-        return profilesPath;
+    public String getMediaPath() {
+        return mediaPath;
     }
 
-    public void setProfilesPath(String profilesPath) {
-        this.profilesPath = profilesPath;
+    public void setMediaPath(String mediaPath) {
+        this.mediaPath = mediaPath;
     }
 
-    public String getStreamURIPath() {
-        return streamURIPath;
+    public String getPtzPath() {
+        return ptzPath;
     }
 
-    public void setStreamURIPath(String streamURIPath) {
-        this.streamURIPath = streamURIPath;
+    public void setPtzPath(String ptzPath) {
+        this.ptzPath = ptzPath;
     }
-
 }

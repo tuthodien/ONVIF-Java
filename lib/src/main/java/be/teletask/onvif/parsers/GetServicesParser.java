@@ -32,12 +32,11 @@ public class GetServicesParser extends OnvifParser<OnvifServices> {
 
                     if (currentNamespace.equals(OnvifType.GET_DEVICE_INFORMATION.namespace)) {
                         String uri = OnvifUtils.retrieveXAddr(getXpp());
-                        path.setDeviceInformationPath(OnvifUtils.getPathFromURL(uri));
+                        path.setDevicePath(OnvifUtils.getPathFromURL(uri));
                     } else if (currentNamespace.equals(OnvifType.GET_MEDIA_PROFILES.namespace)
                             || currentNamespace.equals(OnvifType.GET_STREAM_URI.namespace)) {
                         String uri = OnvifUtils.retrieveXAddr(getXpp());
-                        path.setProfilesPath(OnvifUtils.getPathFromURL(uri));
-                        path.setStreamURIPath(OnvifUtils.getPathFromURL(uri));
+                        path.setMediaPath(OnvifUtils.getPathFromURL(uri));
                     }
                 }
 

@@ -178,12 +178,21 @@ public class OnvifExecutor {
 
     private String getPathForRequest(OnvifDevice device, OnvifRequest request) {
         switch (request.getType()) {
+            case GET_SERVICES:
             case GET_DEVICE_INFORMATION:
-                return device.getPath().getDeviceInformationPath();
+                return device.getPath().getDevicePath();
             case GET_MEDIA_PROFILES:
-                return device.getPath().getProfilesPath();
             case GET_STREAM_URI:
-                return device.getPath().getStreamURIPath();
+            case GET_SNAPSHOT_URI:
+                return device.getPath().getMediaPath();
+            case ABSOLUTE_MOVE:
+            case GET_STATUS:
+            case GOTO_HOME_POSITION:
+            case GOTO_PRESET:
+            case GET_PRESETS:
+            case SET_PRESET:
+            case REMOVE_PRESET:
+                return device.getPath().getPtzPath();
             default:
                 return device.getPath().getServicesPath();
         }
