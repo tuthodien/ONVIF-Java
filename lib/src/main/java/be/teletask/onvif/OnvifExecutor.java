@@ -121,6 +121,7 @@ public class OnvifExecutor {
     private void parseResponse(OnvifDevice device, OnvifResponse response) {
         switch (response.request().getType()) {
             case GET_SERVICES:
+                // call this to initialise service paths (device/media/ptz..)
                 OnvifServices path = new GetServicesParser().parse(response);
                 device.setPath(path);
                 ((GetServicesRequest) response.request()).getListener().onServicesReceived(device, path);

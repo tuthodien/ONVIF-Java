@@ -37,6 +37,9 @@ public class GetServicesParser extends OnvifParser<OnvifServices> {
                             || currentNamespace.equals(OnvifType.GET_STREAM_URI.namespace)) {
                         String uri = OnvifUtils.retrieveXAddr(getXpp());
                         path.setMediaPath(OnvifUtils.getPathFromURL(uri));
+                    } else if (currentNamespace.equals(OnvifType.GET_PTZ_SERVICE.namespace)) {
+                        String uri = OnvifUtils.retrieveXAddr(getXpp());
+                        path.setPtzPath(OnvifUtils.getPathFromURL(uri));
                     }
                 }
 

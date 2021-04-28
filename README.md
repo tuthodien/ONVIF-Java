@@ -213,12 +213,12 @@ Download [the latest JAR][2] or grab via Maven:
 <dependency>
   <groupId>com.github.03</groupId>
   <artifactId>onvif</artifactId>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
 </dependency>
 ```
 or Gradle:
 ```groovy
-compile 'com.github.03:onvif:1.0.6'
+compile 'com.github.03:onvif:1.0.7'
 ```
 
 ## Todos
@@ -246,5 +246,5 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
     
-[2]: https://repo.maven.apache.org/maven2/com/github/03/onvif/1.0.6/onvif-1.0.6.jar
+[2]: https://repo.maven.apache.org/maven2/com/github/03/onvif/1.0.7/onvif-1.0.7.jar
 

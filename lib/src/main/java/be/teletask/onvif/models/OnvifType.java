@@ -12,6 +12,7 @@ public enum OnvifType {
     GET_STREAM_URI("http://www.onvif.org/ver10/media/wsdl"),
     GET_SNAPSHOT_URI("http://www.onvif.org/ver10/media/wsdl"),
     GET_STATUS("http://www.onvif.org/ver20/ptz/wsdl"),
+    GET_PTZ_SERVICE("http://www.onvif.org/ver20/ptz/wsdl"),
     ABSOLUTE_MOVE("http://www.onvif.org/ver20/ptz/wsdl"),
     GOTO_HOME_POSITION("http://www.onvif.org/ver20/ptz/wsdl"),
     GOTO_PRESET("http://www.onvif.org/ver20/ptz/wsdl"),
