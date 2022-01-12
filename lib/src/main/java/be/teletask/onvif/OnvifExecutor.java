@@ -159,6 +159,10 @@ public class OnvifExecutor {
                 setPresetRequest.getListener().onPresetReceived(device, setPresetRequest.getMediaProfile(),
                         new SetPresetParser().parse(response));
                 break;
+            case GET_CONFIGURATIONS:
+                ((GetConfigurationsRequest) response.request()).getListener().onConfigurationsReceived(device,
+                        new GetConfigurationsParser().parse(response));
+                break;
             default:
                 onvifResponseListener.onResponse(device, response);
                 break;
@@ -193,6 +197,7 @@ public class OnvifExecutor {
             case GET_PRESETS:
             case SET_PRESET:
             case REMOVE_PRESET:
+            case GET_CONFIGURATIONS:
                 return device.getPath().getPtzPath();
             default:
                 return device.getPath().getServicesPath();

@@ -18,7 +18,8 @@ public enum OnvifType {
     GOTO_PRESET("http://www.onvif.org/ver20/ptz/wsdl"),
     GET_PRESETS("http://www.onvif.org/ver20/ptz/wsdl"),
     SET_PRESET("http://www.onvif.org/ver20/ptz/wsdl"),
-    REMOVE_PRESET("http://www.onvif.org/ver20/ptz/wsdl")
+    REMOVE_PRESET("http://www.onvif.org/ver20/ptz/wsdl"),
+    GET_CONFIGURATIONS("http://www.onvif.org/ver20/ptz/wsdl")
     ;
 
     public final String namespace;

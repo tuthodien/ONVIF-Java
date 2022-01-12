@@ -22,7 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3da168ea-4515-4ea8-8ef3-e4a8260bf872" name="Default Changelist" comment="Separate individual URI for different service">
+    <list default="true" id="3da168ea-4515-4ea8-8ef3-e4a8260bf872" name="Default Changelist" comment="Call GET_SERVICES to initialise service paths (device/media/ptz..)">
+      <change afterPath="$PROJECT_DIR$/.idea/azure/azureSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/listeners/OnvifConfigurationsListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/parsers/GetConfigurationsParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/requests/GetConfigurationsRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/6.5.1/executionHistory/executionHistory.bin" afterDir="false" />
@@ -36,9 +42,10 @@
       <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/OnvifManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifType.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/models/OnvifType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/parsers/GetServicesParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/be/teletask/onvif/parsers/GetServicesParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +101,13 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="onvif" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="onvif" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -154,9 +167,9 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="be.teletask.onvif.parsers" />
+      <recent name="be.teletask.onvif.models" />
       <recent name="be.teletask.onvif.listeners" />
       <recent name="be.teletask.onvif.requests" />
-      <recent name="be.teletask.onvif.models" />
     </key>
   </component>
   <component name="RubyModuleManagerSettings">
@@ -167,9 +180,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.lib [jar]">
-    <configuration name="SetPresetParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="be.teletask.onvif.parsers.SetPresetParser" />
+  <component name="RunManager" selected="Gradle.lib [clean]">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetConfigurationsParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="be.teletask.onvif.parsers.GetConfigurationsParser" />
       <module name="onvif.main" />
       <extension name="coverage">
         <pattern>
@@ -181,13 +205,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="GetMediaProfilesParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="be.teletask.onvif.parsers.GetMediaProfilesParser" />
+      <module name="onvif.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.teletask.onvif.parsers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -255,34 +281,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="lib [releaseRepository]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/lib" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="releaseRepository" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.lib [jar]" />
         <item itemvalue="Gradle.lib [clean]" />
         <item itemvalue="Gradle.lib [build]" />
-        <item itemvalue="Application.SetPresetParser" />
-        <item itemvalue="Gradle.lib [releaseRepository]" />
+        <item itemvalue="Application.GetConfigurationsParser" />
+        <item itemvalue="Application.GetMediaProfilesParser" />
+        <item itemvalue="Gradle.lib [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +330,15 @@
       <workItem from="1612849593250" duration="20000" />
       <workItem from="1619510124012" duration="7900000" />
       <workItem from="1619568148968" duration="11383000" />
-      <workItem from="1619604483398" duration="2897000" />
+      <workItem from="1619604483398" duration="4323000" />
+      <workItem from="1621399514905" duration="876000" />
+      <workItem from="1626746478490" duration="808000" />
+      <workItem from="1626912591200" duration="2732000" />
+      <workItem from="1627097355687" duration="1329000" />
+      <workItem from="1627098777991" duration="267000" />
+      <workItem from="1641790414778" duration="4349000" />
+      <workItem from="1641861780001" duration="14326000" />
+      <workItem from="1641946864229" duration="14393000" />
     </task>
     <task id="LOCAL-00001" summary="Update version comments">
       <created>1596515225471</created>
@@ -411,19 +424,27 @@
       <option name="project" value="LOCAL" />
       <updated>1619515343674</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Call GET_SERVICES to initialise service paths (device/media/ptz..)">
+      <created>1619608189447</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1619608189447</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
+    <option name="COLUMN_ID_ORDER">
       <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
       </list>
     </option>
   </component>
@@ -450,6 +471,7 @@
     <MESSAGE value="Prepare for 1.0.5 release" />
     <MESSAGE value="add setPreset" />
     <MESSAGE value="Separate individual URI for different service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Separate individual URI for different service" />
+    <MESSAGE value="Call GET_SERVICES to initialise service paths (device/media/ptz..)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Call GET_SERVICES to initialise service paths (device/media/ptz..)" />
   </component>
 </project>

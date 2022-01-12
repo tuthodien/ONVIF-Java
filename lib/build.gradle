@@ -36,7 +36,7 @@ dependencies {
     compile group: 'net.sf.kxml', name: 'kxml2', version: '2.3.0'
 
     //OkHttp
-    compile 'com.squareup.okhttp3:okhttp:4.8.0'
+    compile 'com.squareup.okhttp3:okhttp:4.9.3'
 
     //OkHttp Digest
     compile 'com.burgstaller:okhttp-digest:2.1'
@@ -56,7 +56,7 @@ ext {
     siteUrl = 'https://github.com/RootSoft/ONVIF-Java'
     gitUrl = 'https://github.com/RootSoft/ONVIF-Java.git'
 
-    libraryVersion = '1.0.7'
+    libraryVersion = '1.0.8'
 
     developerId = 'tomasverhelst'
     developerName = 'Tomas Verhelst'
