@@ -145,6 +145,17 @@ onvifManager.getStatus(device, mediaProfiles.get(0), (onvifDevice, profile, stat
 });
 ```
 
+## Configurations
+---
+
+getConfigurations
+
+```java
+onvifManager.getConfigurations(device, (onvifDevice, configurations) -> {
+    log.info("onConfigurationsReceived: configurations: {}.", configurations);
+});
+```
+
 ## Presets
 ---
 
